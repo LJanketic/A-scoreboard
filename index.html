@@ -19,8 +19,9 @@
     <button @click="addPlayer" >Add player</button>
     <p v-if="playerList.length === 0">No players currently in lobby!</p>
     <ul v-else>
-      <li v-for="player in playerList">{{ player }}</li>
+      <li v-for="player in playerList">{{ player.Name }} <button @click="player.Score++">+</button><a>{{ player.Score }}</a></li>
     </ul>
+    <button @click="resetLobby">Reset lobby!</button>
   </section>
 </body>
 

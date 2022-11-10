@@ -8,9 +8,13 @@ const app = Vue.createApp({
     methods: {
         addPlayer() {
             const nameToUpper = this.newPlayerInput[0].toUpperCase() + this.newPlayerInput.slice(1)
-            this.playerList.push(nameToUpper)
+            this.playerList.push({Name: nameToUpper, Score: 0})
             this.newPlayerInput = ""
-            console.log('Current player list: ', this.playerList)
+        },
+        resetLobby() {
+            alert("Lobby reset!")
+            this.playerList = []
+            this.newPlayerInput = ""
         }
     }
 })
