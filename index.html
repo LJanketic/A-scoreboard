@@ -15,8 +15,8 @@
   <header>Connect 4 Scoreboard</header>
   <section id="scoreboard-section">
     <h2>Insert Creation</h2>
-    <input type="text"/>
-    <button>Add player</button>
+    <input type="text" v-model="newPlayerInput"/>
+    <button @click="addPlayer">Add player</button>
     <p>Static text placeholder for empty lobby</p>
     <table>
       <tr>
