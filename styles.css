@@ -31,6 +31,11 @@
     text-align: center;
   }
 
+  #add-player-input {
+    width: 69%;
+    margin-bottom: 1vh;
+  }
+
   #insertion-modal {
     margin: 1vh;
     padding-top: 0.5vh;
@@ -46,13 +51,36 @@
     text-align: center;
   }
 
-  #score-increment {
-    width: 10%;
-  }
-
   #player-paragraph {
     width: 80%;
+    min-width: 80%;
+    max-width: 80%;
     margin: 1vh auto 1vh auto;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   }
+
+  #score-increment {
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+    text-align: center;
+    margin-right: 2vw;
+    border-radius: 10px;
+  }
+
+  #player-name {
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+    text-align: left;
+    padding-left: 2vw;
+  }
+
+  #current-score {
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+    text-align: center;
+  }
+

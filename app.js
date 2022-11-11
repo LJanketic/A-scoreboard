@@ -9,7 +9,8 @@ const app = Vue.createApp({
     methods: {
         addPlayer() {
             if (this.newPlayerInput !== "") {
-                const nameToUpper = this.newPlayerInput[0].toUpperCase() + this.newPlayerInput.slice(1)
+                let nameToUpper = this.newPlayerInput[0].toUpperCase() + this.newPlayerInput.slice(1)
+                nameToUpper = nameToUpper.substring(0, 8)
                 this.playerList.push({ Name: nameToUpper, Score: 0 })
                 this.newPlayerInput = ""
             } else {
