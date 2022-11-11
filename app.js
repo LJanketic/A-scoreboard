@@ -3,7 +3,8 @@ const app = Vue.createApp({
         return {
             newPlayerInput: "",
             playerList: [],
-            maxScore: 5
+            maxScore: 5,
+            isDisabled: true
         }
     },
     methods: {
@@ -21,13 +22,18 @@ const app = Vue.createApp({
             alert("Lobby reset!")
             this.playerList = []
             this.newPlayerInput = ""
+            this.isDisabled = true
         },
         endGame(player) {
             if (player.Score === 5) {
                 alert('Game over ' + player.Name + ' has won!')
                 this.playerList = []
                 this.newPlayerInput = ""
+                this.isDisabled = true
             }
+        },
+        startGame() {
+            this.isDisabled = false
         }
     }
 })
