@@ -15,13 +15,13 @@
   <header>Connect 4 Scoreboard</header>
   <section id="scoreboard-section">
     <h2>Insert Player Name</h2>
-    <input type="text" v-model="newPlayerInput" @keyup.enter="addPlayer"/>
-    <button @click="addPlayer" >Add player</button>
+    <input id="add-player-input" type="text" v-model="newPlayerInput" @keyup.enter="addPlayer"/>
+    <button id="add-player-button" @click="addPlayer" >Add player</button>
     <p v-if="playerList.length === 0">No players currently in lobby!</p>
     <ul v-else>
       <li v-for="player in playerList">{{ player.Name }} <button @click="player.Score++; endGame(player)">+</button><a>{{ player.Score }}</a></li>
     </ul>
-    <button @click="resetLobby">Reset lobby!</button>
+    <button id="reset-button" @click="resetLobby">Reset lobby!</button>
   </section>
 </body>
 
