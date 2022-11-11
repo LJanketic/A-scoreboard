@@ -4,9 +4,15 @@
   
   html {
     font-family: 'Jost', sans-serif;
+    background-color: white;
   }
+
   
   body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: wheat;
     width: 50%;
     margin: auto;
     margin-top: 10vh;
@@ -23,4 +29,30 @@
     background-color: #1b995e;
     color: white;
     text-align: center;
+  }
+
+  #insertion-modal {
+    margin: 1vh;
+    padding-top: 0.5vh;
+    padding-bottom: 2vh;
+    border-radius: 10px;
+    background-color: #1b995e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+
+  #player-paragraph {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  #score-increment {
+    width: 10%;
+  }
+
+  #player-paragraph {
+    width: 80%;
+    margin: 1vh auto 1vh auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   }
