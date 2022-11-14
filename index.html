@@ -15,9 +15,10 @@
   <header><h2>Scoreboard</h2></header>
   <section id="scoreboard-section">
     <div id="insertion-modal">
-      <h2>Input player name</h2>
-      <input id="add-player-input" type="text" v-model="newPlayerInput" @keyup.enter="addPlayer" :disabled="!isDisabled" />
-      <button id="add-player-button" @click="addPlayer" :disabled="!isDisabled">Add player</button>
+      <h2 v-if="isDisabled">Input player name</h2>
+      <h2 v-else>Game Started!</h2>
+      <input v-if="isDisabled" id="add-player-input" type="text" v-model="newPlayerInput" @keyup.enter="addPlayer" :disabled="!isDisabled" />
+      <button v-if="isDisabled" id="add-player-button" @click="addPlayer" :disabled="!isDisabled">Add player</button>
       <p v-if="playerList.length === 0">No players currently in lobby!</p>
       <p id="player-paragraph" v-else v-for="player in playerList"><a id="player-name">Name: {{ player.Name }}</a> <a
           id="current-score">Current score: {{ player.Score
